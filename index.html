@@ -105,6 +105,10 @@
         .tarot-front, .tarot-back {
             backface-visibility: hidden;
             -webkit-backface-visibility: hidden;
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
         }
         .tarot-back {
             transform: rotateY(180deg);
@@ -488,7 +492,7 @@
                 <div id="tarot-card" class="w-60 h-92 sm:w-64 sm:h-96 cursor-pointer tarot-card-flip transition-transform hover:scale-105" onclick="flipTarotCard()">
                     <div class="tarot-card-inner relative w-full h-full rounded-3xl shadow-2xl">
                         <!-- Card Back -->
-                        <div class="tarot-front absolute inset-0 rounded-3xl card-glass border-2 border-amber-500/60 flex flex-col items-center justify-center p-8 bg-gradient-to-br from-purple-950 via-mysticCard to-purple-900 shadow-2xl">
+                        <div class="tarot-front rounded-3xl card-glass border-2 border-amber-500/60 flex flex-col items-center justify-center p-8 bg-gradient-to-br from-purple-950 via-mysticCard to-purple-900 shadow-2xl">
                             <div class="w-20 h-20 rounded-full bg-amber-500/10 border border-amber-500/40 flex items-center justify-center mb-4 shadow-inner">
                                 <i class="fa-solid fa-moon text-amber-400 text-3xl"></i>
                             </div>
@@ -496,13 +500,13 @@
                             <span class="text-xs text-slate-300 text-center font-light">Toca para voltear y revelar tu mensaje secreto</span>
                         </div>
                         <!-- Card Front (Revealed) -->
-                        <div class="tarot-back absolute inset-0 rounded-3xl card-glass border-2 border-amber-500 flex flex-col items-center justify-center p-8 bg-gradient-to-br from-amber-950/50 via-mysticCard to-purple-950 shadow-2xl">
-                            <span id="tarot-card-icon" class="text-4xl mb-3">🌟</span>
-                            <h4 id="tarot-card-title" class="font-cinzel font-bold text-xl text-amber-400 mb-2">La Estrella</h4>
-                            <p id="tarot-card-desc" class="text-xs text-slate-200 text-center leading-relaxed">
+                        <div class="tarot-back rounded-3xl card-glass border-2 border-amber-500 flex flex-col items-center justify-center p-6 bg-gradient-to-br from-amber-950/50 via-mysticCard to-purple-950 shadow-2xl">
+                            <span id="tarot-card-icon" class="text-4xl mb-2">🌟</span>
+                            <h4 id="tarot-card-title" class="font-cinzel font-bold text-lg text-amber-400 mb-2">La Estrella</h4>
+                            <p id="tarot-card-desc" class="text-[11px] sm:text-xs text-slate-200 text-center leading-relaxed mb-4">
                                 Esperanza, inspiración y conexión divina. Es momento de confiar plenamente en tu intuición y dejar atrás las dudas.
                             </p>
-                            <span class="mt-4 text-[10px] text-amber-400 uppercase tracking-widest font-bold">Método Gisela Lorme</span>
+                            <span class="text-[9px] text-amber-400 uppercase tracking-widest font-bold">Método Gisela Lorme</span>
                         </div>
                     </div>
                 </div>
