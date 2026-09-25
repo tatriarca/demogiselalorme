@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gisela Lorme | Terapeuta Holística y Tarotista Intuitiva</title>
+    <meta name="description" content="Aprende tarot intuitivo sin fórmulas ni manuales con Gisela Lorme. Descubre el curso digital en Hotmart y talleres en vivo por Zoom para transformar tu conexión espiritual.">
+    <meta name="keywords" content="Gisela Lorme, Tarot Intuitivo, Curso de Tarot Hotmart, Terapeuta Holística, Tarot Terapéutico, Conecta los Arcanos">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mysticDark: '#0B0914',
+                        mysticCard: '#151124',
+                        mysticPurple: '#7C3AED',
+                        mysticGold: '#D97706',
+                        mysticGoldLight: '#FBBF24',
+                        mysticAccent: '#9333EA',
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'shimmer': 'shimmer 2.5s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        shimmer: {
+                            '100%': { transform: 'translateX(100%)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0B0914;
+            color: #E2E8F0;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FDE68A 0%, #D97706 50%, #F59E0B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .purple-glow {
+            box-shadow: 0 0 40px -10px rgba(124, 58, 237, 0.3);
+        }
+        .gold-glow {
+            box-shadow: 0 0 30px -5px rgba(217, 119, 6, 0.25);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0914;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4C1D95;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6D28D9;
+        }
+        .card-glass {
+            background: rgba(21, 17, 36, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(139, 92, 246, 0.15);
+        }
+        .tarot-card-flip {
+            perspective: 1000px;
+        }
+        .tarot-card-inner {
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        .tarot-card-flip.flipped .tarot-card-inner {
+            transform: rotateY(180deg);
+        }
+        .tarot-front, .tarot-back {
+            backface-visibility: hidden;
+        }
+        .tarot-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="bg-mysticDark text-slate-100 antialiased selection:bg-purple-600 selection:text-white">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-mysticDark/80 backdrop-blur-md border-b border-purple-900/30" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-purple-600 to-amber-500 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-moon text-white text-lg"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-cinzel font-bold text-lg tracking-wider text-white">GISELA LORME</span>
+                    <span class="text-xs text-amber-400 tracking-widest">TAROT & HOLÍSTICA</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#sobre-mi" class="hover:text-amber-400 transition-colors">Sobre Mí</a>
+                <a href="#curso-hotmart" class="hover:text-amber-400 transition-colors">Curso Digital</a>
+                <a href="#curso-zoom" class="hover:text-amber-400 transition-colors">Clases en Vivo (Zoom)</a>
+                <a href="#experiencia" class="hover:text-amber-400 transition-colors">Lectura Interactiva</a>
+                <a href="#testimonios" class="hover:text-amber-400 transition-colors">Testimonios</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://hotmart.com/es/marketplace/productos/conecta-los-arcanos-sin-formulas-ni-manual-y-en-menos-de-una-estaras-haciendo-lecturas-intuitivas/M104576595U" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold text-sm tracking-wide shadow-lg shadow-amber-500/20 transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-graduation-cap mr-2"></i>Acceder al Curso
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white p-2 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-mysticCard border-b border-purple-900/40 px-6 py-6 space-y-4 shadow-2xl">
+            <a href="#sobre-mi" class="block text-slate-200 hover:text-amber-400 transition-colors font-medium">Sobre Mí</a>
+            <a href="#curso-hotmart" class="block text-slate-200 hover:text-amber-400 transition-colors font-medium">Curso Digital</a>
+            <a href="#curso-zoom" class="block text-slate-200 hover:text-amber-400 transition-colors font-medium">Clases en Vivo (Zoom)</a>
+            <a href="#experiencia" class="block text-slate-200 hover:text-amber-400 transition-colors font-medium">Lectura Interactiva</a>
+            <a href="#testimonios" class="block text-slate-200 hover:text-amber-400 transition-colors font-medium">Testimonios</a>
+            <div class="pt-2">
+                <a href="https://hotmart.com/es/marketplace/productos/conecta-los-arcanos-sin-formulas-ni-manual-y-en-menos-de-una-estaras-haciendo-lecturas-intuitivas/M104576595U" target="_blank" rel="noopener" class="block text-center w-full py-3 rounded-xl bg-amber-500 text-slate-950 font-bold shadow-lg shadow-amber-500/20">
+                    Acceder al Curso en Hotmart
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
+        <!-- Background decorative mystic glow elements -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-700/15 rounded-full blur-[130px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-amber-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-950/60 border border-purple-500/30 text-amber-400 text-xs sm:text-sm tracking-widest font-semibold uppercase animate-pulse-slow">
+                        <i class="fa-solid fa-sparkles"></i> Despierta Tu Intuición Sagrada
+                    </div>
+                    
+                    <h1 class="font-cinzel text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+                        Conecta Con Los Arcanos <br class="hidden sm:inline">
+                        <span class="gold-gradient-text">Sin Fórmulas Ni Manual</span>
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Domina el Tarot desde la intuición y el autoconocimiento profundo. En menos de una hora estarás haciendo lecturas certeras, transformadoras y confiadas con el método único de <span class="text-amber-400 font-semibold">Gisela Lorme</span>.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="https://hotmart.com/es/marketplace/productos/conecta-los-arcanos-sin-formulas-ni-manual-y-en-menos-de-una-estaras-haciendo-lecturas-intuitivas/M104576595U" target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 hover:from-amber-600 hover:to-amber-500 text-slate-950 font-bold text-base tracking-wide shadow-xl shadow-amber-500/25 transition-all transform hover:-translate-y-1 text-center">
+                            <i class="fa-solid fa-bolt mr-2"></i> Inscríbete al Curso Digital
+                        </a>
+                        <a href="#curso-zoom" class="w-full sm:w-auto px-8 py-4 rounded-full card-glass hover:bg-purple-900/30 text-white font-semibold text-base tracking-wide border border-purple-500/40 transition-all text-center">
+                            <i class="fa-solid fa-video mr-2"></i> Ver Clases en Vivo (Zoom)
+                        </a>
+                    </div>
+
+                    <div class="pt-6 flex items-center justify-center lg:justify-start gap-6 text-sm text-slate-400">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check-circle text-amber-400"></i> Acceso Inmediato
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check-circle text-amber-400"></i> Metodología Probada
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check-circle text-amber-400"></i> Certificado
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual mystic card element / Hero Image -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md animate-float">
+                        <!-- Decorative glow card frame -->
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-purple-600 via-amber-500 to-purple-800 opacity-30 blur-xl"></div>
+                        
+                        <div class="relative rounded-3xl card-glass p-6 sm:p-8 border border-purple-500/30 shadow-2xl text-center">
+                            <div class="absolute -top-6 -right-6 w-16 h-16 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center backdrop-blur-md">
+                                <i class="fa-solid fa-star text-amber-400 text-xl animate-spin" style="animation-duration: 12s;"></i>
+                            </div>
+
+                            <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-amber-500/50 shadow-xl mb-6 relative">
+                                <!-- Gisela Lorme avatar placeholder -->
+                                <img src="https://placehold.co/300x300/151124/FBBF24?text=Gisela+Lorme" alt="Gisela Lorme Terapeuta Holística" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/300x300/151124/FBBF24?text=Gisela+Lorme'">
+                            </div>
+
+                            <h3 class="font-cinzel text-2xl font-bold text-white mb-2">Gisela Lorme</h3>
+                            <p class="text-amber-400 text-sm font-medium tracking-wide mb-4">Terapeuta Holística & Tarotista Profesional</p>
+                            
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                "Mi misión es guiarte para que dejes atrás la dependencia de los manuales y conectes tu alma directamente con la sabiduría ancestral del tarot."
+                            </p>
+
+                            <div class="grid grid-cols-3 gap-2 py-4 border-t border-b border-purple-900/50 text-center">
+                                <div>
+                                    <span class="block font-bold text-lg text-amber-400">+10 años</span>
+                                    <span class="text-xs text-slate-400">Experiencia</span>
+                                </div>
+                                <div>
+                                    <span class="block font-bold text-lg text-amber-400">+5,000</span>
+                                    <span class="text-xs text-slate-400">Alumnos</span>
+                                </div>
+                                <div>
+                                    <span class="block font-bold text-lg text-amber-400">100%</span>
+                                    <span class="text-xs text-slate-400">Práctico</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-mi" class="py-24 bg-mysticCard/50 relative border-t border-purple-900/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-400 text-sm tracking-widest uppercase font-semibold">Tu Guía Espiritual</span>
+                <h2 class="font-cinzel text-3xl sm:text-5xl font-bold mt-2 mb-4">Conoce a Gisela Lorme</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h3 class="font-cinzel text-2xl sm:text-3xl font-semibold text-purple-200">
+                        Sanando el alma y descifrando el destino a través de la intuición.
+                    </h3>
+                    <p class="text-slate-300 leading-relaxed font-light">
+                        Hola, soy <strong class="text-white font-medium">Gisela Lorme</strong>. A lo largo de mi trayectoria como terapeuta holística y tarotista, he comprobado que el mayor bloqueador al aprender tarot no es la falta de memoria, sino la desconexión con nuestra propia intuición.
+                    </p>
+                    <p class="text-slate-300 leading-relaxed font-light">
+                        Nos han enseñado que para leer las cartas necesitamos memorizar significados rígidos y manuales interminables de cientos de páginas. Mi enfoque rompe con ese paradigma para que aprendas a <span class="text-amber-400 font-semibold">sentir los arcanos</span> y dialogar con ellos de manera natural y fluida.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 rounded-2xl card-glass border border-purple-500/20 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-purple-600/20 flex items-center justify-center shrink-0 text-amber-400">
+                                <i class="fa-solid fa-heart-pulse text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base mb-1">Terapia Holística</h4>
+                                <p class="text-xs text-slate-400">Enfoque integral que une mente, cuerpo y espíritu.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-2xl card-glass border border-purple-500/20 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-purple-600/20 flex items-center justify-center shrink-0 text-amber-400">
+                                <i class="fa-solid fa-eye text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base mb-1">Tarot Intuitivo</h4>
+                                <p class="text-xs text-slate-400">Lecturas reales sin depender de libros ni fórmulas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-purple-600 to-amber-500 rounded-3xl blur-2xl opacity-20"></div>
+                    <div class="relative card-glass p-8 rounded-3xl border border-purple-500/30 space-y-6">
+                        <h4 class="font-cinzel text-xl font-bold text-amber-400 flex items-center gap-2">
+                            <i class="fa-solid fa-quote-left"></i> Mi Filosofía de Enseñanza
+                        </h4>
+                        <blockquote class="text-slate-200 italic leading-relaxed">
+                            "Las cartas del tarot son espejos del alma. Cuando dejas de estudiar el tarot como un examen escolar y empiezas a vivirlo como un lenguaje visual y energético, las respuestas fluyen por sí solas."
+                        </blockquote>
+                        <div class="flex items-center justify-between pt-4 border-t border-purple-900/50">
+                            <div>
+                                <span class="block font-cinzel font-bold text-white">Gisela Lorme</span>
+                                <span class="text-xs text-slate-400">Fundadora del Método Conecta</span>
+                            </div>
+                            <div class="text-amber-400 text-2xl font-cinzel font-bold">
+                                🎴✨
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotmart Digital Course Section -->
+    <section id="curso-hotmart" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/30 via-mysticDark to-mysticDark pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold tracking-widest uppercase">
+                    Bestseller Digital en Hotmart
+                </span>
+                <h2 class="font-cinzel text-3xl sm:text-5xl font-bold mt-4 mb-4">
+                    Conecta los Arcanos sin fórmulas ni manual
+                </h2>
+                <p class="text-slate-300 text-base sm:text-lg">
+                    Y en menos de una hora estarás haciendo lecturas intuitivas.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="card-glass p-8 rounded-3xl border border-amber-500/30 shadow-xl space-y-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-purple-300 uppercase tracking-wider bg-purple-950 px-3 py-1 rounded-full border border-purple-800">
+                                Curso 100% Online
+                            </span>
+                            <div class="text-amber-400 flex items-center gap-1 text-sm font-bold">
+                                <i class="fa-solid fa-star"></i> 4.9 / 5.0 (Hotmart)
+                            </div>
+                        </div>
+
+                        <h3 class="font-cinzel text-2xl font-bold text-white">
+                            ¿Qué aprenderás en este curso digital?
+                        </h3>
+
+                        <ul class="space-y-4 text-slate-300">
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-check text-xs"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-white font-semibold">Adiós a la memoria rígida:</strong> Descubre cómo interpretar cualquier arcano dejándote guiar por la imagen y tu voz interior.
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-check text-xs"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-white font-semibold">Lecturas desde la 1ra hora:</strong> Prácticas sencillas y directas para empezar a tirar las cartas el mismo día que inicias.
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-check text-xs"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-white font-semibold">Tiradas clave y efectivas:</strong> Métodos limpios para responder preguntas de amor, trabajo y evolución espiritual sin enredos.
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-check text-xs"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-white font-semibold">Acceso de por vida:</strong> Visualiza las lecciones cuantas veces quieras desde tu computadora, tablet o celular.
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="pt-4">
+                            <a href="https://hotmart.com/es/marketplace/productos/conecta-los-arcanos-sin-formulas-ni-manual-y-en-menos-de-una-estaras-haciendo-lecturas-intuitivas/M104576595U" target="_blank" rel="noopener" class="block w-full py-4 rounded-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 hover:from-amber-600 hover:to-amber-500 text-slate-950 font-bold text-center tracking-wide shadow-xl shadow-amber-500/30 transition-all transform hover:-translate-y-1">
+                                <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> Inscríbete en Hotmart Ahora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 flex flex-col justify-center space-y-6">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-purple-500/40 group">
+                        <div class="absolute inset-0 bg-gradient-to-t from-mysticDark via-transparent to-transparent z-10"></div>
+                        <!-- Course Preview Banner -->
+                        <img src="https://placehold.co/600x400/151124/FBBF24?text=Curso+Digital+Hotmart+Conecta+Los+Arcanos" alt="Curso Digital Hotmart Gisela Lorme" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/151124/FBBF24?text=Curso+Digital+Hotmart'">
+                        
+                        <div class="absolute bottom-6 left-6 right-6 z-20 space-y-2">
+                            <span class="px-3 py-1 bg-amber-500 text-slate-950 font-bold text-xs rounded-full">HOTMART OFICIAL</span>
+                            <h4 class="font-cinzel text-xl sm:text-2xl font-bold text-white">Conecta los Arcanos</h4>
+                            <p class="text-slate-300 text-xs sm:text-sm">Transforma tu intuición y comienza a leer el tarot hoy mismo.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-5 rounded-2xl card-glass border border-purple-500/20 text-center">
+                            <span class="block font-cinzel font-bold text-2xl text-amber-400">⚡ Rápido</span>
+                            <span class="text-xs text-slate-400">Resultados desde el primer día</span>
+                        </div>
+                        <div class="p-5 rounded-2xl card-glass border border-purple-500/20 text-center">
+                            <span class="block font-cinzel font-bold text-2xl text-amber-400">📜 Certificado</span>
+                            <span class="text-xs text-slate-400">Avalado por Gisela Lorme</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Zoom Live Course Section -->
+    <section id="curso-zoom" class="py-24 bg-mysticCard/50 border-t border-purple-900/20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="px-4 py-1.5 rounded-full bg-purple-950 border border-purple-500/35 text-purple-300 text-xs font-bold tracking-widest uppercase">
+                    Cupos Limitados • Masterclass Interactiva
+                </span>
+                <h2 class="font-cinzel text-3xl sm:text-5xl font-bold mt-4 mb-4">
+                    Curso en Vivo por Zoom con Gisela
+                </h2>
+                <p class="text-slate-300 text-base sm:text-lg">
+                    Una experiencia íntima, interactiva y en tiempo real para resolver tus dudas y practicar lecturas guiadas cara a cara.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Zoom Detail Card 1 -->
+                <div class="card-glass p-8 rounded-3xl border border-purple-500/30 flex flex-col justify-between relative group hover:border-amber-500/50 transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-purple-600/20 flex items-center justify-center text-amber-400 mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-calendar-days text-xl"></i>
+                        </div>
+                        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Próxima Fecha</span>
+                        <h3 class="font-cinzel text-xl font-bold text-white mt-1 mb-3">Sábado de Tarot Vivo</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Clase magistral interactiva de 3 horas por Zoom. Práctica en vivo con compañeros y feedback personalizado de Gisela Lorme.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 pt-4 border-t border-purple-900/50">
+                        <div class="flex items-center justify-between text-xs text-slate-400">
+                            <span><i class="fa-solid fa-clock text-amber-400 mr-1"></i> 10:00 AM (GMT-5)</span>
+                            <span class="text-amber-400 font-semibold">Quedan 5 cupos</span>
+                        </div>
+                        <button onclick="openWhatsAppModal('¡Hola Gisela! Me interesa reservar mi lugar para la próxima clase en vivo por Zoom.')" class="w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-sm tracking-wide transition-all shadow-lg shadow-purple-600/25">
+                            Reservar por WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Zoom Detail Card 2 (Featured) -->
+                <div class="card-glass p-8 rounded-3xl border-2 border-amber-500/60 flex flex-col justify-between relative transform lg:-translate-y-4 gold-glow">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-amber-500 text-slate-950 font-bold text-xs uppercase tracking-widest">
+                        Más Popular
+                    </div>
+
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/20 flex items-center justify-center text-amber-400 mb-6">
+                            <i class="fa-solid fa-users-viewfinder text-xl"></i>
+                        </div>
+                        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Programa Intensivo</span>
+                        <h3 class="font-cinzel text-2xl font-bold text-white mt-1 mb-3">Taller VIP en Vivo (4 Semanas)</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Inmersión grupal por Zoom. Aprende arcanos mayores y menores, tiradas avanzadas, ética del tarotista y acompañamiento directo en cada sesión.
+                        </p>
+                        
+                        <ul class="space-y-2 text-xs text-slate-300 mb-6">
+                            <li><i class="fa-solid fa-check text-amber-400 mr-2"></i> 4 Sesiones en vivo por Zoom</li>
+                            <li><i class="fa-solid fa-check text-amber-400 mr-2"></i> Grupo privado de Telegram</li>
+                            <li><i class="fa-solid fa-check text-amber-400 mr-2"></i> Grabaciones disponibles 24/7</li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-4 pt-4 border-t border-purple-900/50">
+                        <div class="flex items-center justify-between text-xs text-slate-400">
+                            <span>Cupo exclusivo</span>
+                            <span class="text-amber-400 font-semibold">Inscripciones Abiertas</span>
+                        </div>
+                        <button onclick="openWhatsAppModal('¡Hola Gisela! Quiero información y reservar mi lugar para el Taller VIP en Vivo de 4 semanas.')" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold text-sm tracking-wide transition-all shadow-lg shadow-amber-500/30">
+                            Asegurar Mi Cupo VIP
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Zoom Detail Card 3 -->
+                <div class="card-glass p-8 rounded-3xl border border-purple-500/30 flex flex-col justify-between relative group hover:border-amber-500/50 transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-purple-600/20 flex items-center justify-center text-amber-400 mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-user-gear text-xl"></i>
+                        </div>
+                        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Personalizado</span>
+                        <h3 class="font-cinzel text-xl font-bold text-white mt-1 mb-3">Mentoría 1 a 1 por Zoom</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Sesión privada exclusiva con Gisela Lorme. Resolución de bloqueos personales, práctica enfocada en tus necesidades y guía espiritual directa.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 pt-4 border-t border-purple-900/50">
+                        <div class="flex items-center justify-between text-xs text-slate-400">
+                            <span><i class="fa-solid fa-video text-amber-400 mr-1"></i> 60 Minutos</span>
+                            <span class="text-amber-400 font-semibold">Horarios a coordinar</span>
+                        </div>
+                        <button onclick="openWhatsAppModal('¡Hola Gisela! Me gustaría agendar una Mentoría 1 a 1 personalizada por Zoom contigo.')" class="w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-sm tracking-wide transition-all shadow-lg shadow-purple-600/25">
+                            Agendar Mentoría
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Tarot Card Demo Section -->
+    <section id="experiencia" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-radial from-purple-950/20 via-mysticDark to-mysticDark pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="text-amber-400 text-sm tracking-widest uppercase font-semibold">Minidemo Interactiva</span>
+            <h2 class="font-cinzel text-3xl sm:text-5xl font-bold mt-2 mb-4">Saca una Carta del Oráculo</h2>
+            <p class="text-slate-300 text-base mb-10">
+                Haz clic en la carta para descubrir el mensaje energético que Gisela Lorme y los arcanos tienen para ti hoy.
+            </p>
+
+            <div class="flex justify-center mb-8">
+                <div id="tarot-card" class="w-64 h-96 cursor-pointer tarot-card-flip" onclick="flipTarotCard()">
+                    <div class="tarot-card-inner relative w-full h-full rounded-3xl shadow-2xl">
+                        <!-- Card Back -->
+                        <div class="tarot-front absolute inset-0 rounded-3xl card-glass border-2 border-amber-500/50 flex flex-col items-center justify-center p-6 bg-gradient-to-br from-purple-950 via-mysticCard to-purple-900">
+                            <div class="w-20 h-20 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-moon text-amber-400 text-3xl"></i>
+                            </div>
+                            <span class="font-cinzel font-bold text-amber-400 text-lg tracking-wider mb-2">ARCANO DEL DÍA</span>
+                            <span class="text-xs text-slate-300 text-center">Haz clic para voltear y revelar tu mensaje intuitivo</span>
+                        </div>
+                        <!-- Card Front (Revealed) -->
+                        <div class="tarot-back absolute inset-0 rounded-3xl card-glass border-2 border-amber-500 flex flex-col items-center justify-center p-6 bg-gradient-to-br from-amber-950/40 via-mysticCard to-purple-950">
+                            <span id="tarot-card-icon" class="text-4xl mb-3">🌟</span>
+                            <h4 id="tarot-card-title" class="font-cinzel font-bold text-xl text-amber-400 mb-2">La Estrella</h4>
+                            <p id="tarot-card-desc" class="text-xs text-slate-200 text-center leading-relaxed">
+                                Esperanza, inspiración y conexión divina. Es momento de confiar plenamente en tu intuición y dejar atrás las dudas.
+                            </p>
+                            <span class="mt-4 text-[10px] text-amber-400/80 uppercase tracking-widest font-bold">Método Gisela Lorme</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="resetTarotCard()" class="px-6 py-2.5 rounded-full card-glass hover:bg-purple-900/40 text-slate-300 text-xs font-semibold tracking-wider border border-purple-500/30 transition-all">
+                <i class="fa-solid fa-rotate-right mr-2"></i> Barajar de Nuevo
+            </button>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="py-24 bg-mysticCard/40 border-t border-purple-900/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-400 text-sm tracking-widest uppercase font-semibold">Testimonios Reales</span>
+                <h2 class="font-cinzel text-3xl sm:text-5xl font-bold mt-2 mb-4">Lo que dicen nuestros alumnos</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="card-glass p-8 rounded-3xl border border-purple-500/20 space-y-4">
+                    <div class="flex items-center gap-1 text-amber-400 text-sm">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm italic leading-relaxed">
+                        "El curso digital de Gisela en Hotmart me cambió la vida. Me quitó el miedo a leer las cartas sin manual. ¡En mi primera tirada logré conectar con una claridad increíble!"
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-purple-900/40">
+                        <div class="w-10 h-10 rounded-full bg-purple-600/30 flex items-center justify-center font-bold text-amber-400 font-cinzel">
+                            MC
+                        </div>
+                        <div>
+                            <span class="block font-bold text-white text-sm">Mariana C.</span>
+                            <span class="text-xs text-slate-400">Alumna Curso Digital Hotmart</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-glass p-8 rounded-3xl border border-purple-500/20 space-y-4">
+                    <div class="flex items-center gap-1 text-amber-400 text-sm">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm italic leading-relaxed">
+                        "Tomar la clase en vivo por Zoom con Gisela Lorme fue una experiencia sanadora. Su energía y calidez te hacen sentir segura desde el primer segundo. 100% recomendado."
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-purple-900/40">
+                        <div class="w-10 h-10 rounded-full bg-purple-600/30 flex items-center justify-center font-bold text-amber-400 font-cinzel">
+                            VR
+                        </div>
+                        <div>
+                            <span class="block font-bold text-white text-sm">Valeria R.</span>
+                            <span class="text-xs text-slate-400">Participante Taller Zoom</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-glass p-8 rounded-3xl border border-purple-500/20 space-y-4">
+                    <div class="flex items-center gap-1 text-amber-400 text-sm">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm italic leading-relaxed">
+                        "Pensé que aprender tarot era muy difícil por la cantidad de significados, pero el método sin fórmulas de Gisela es directo al grano y profundamente transformador."
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-purple-900/40">
+                        <div class="w-10 h-10 rounded-full bg-purple-600/30 flex items-center justify-center font-bold text-amber-400 font-cinzel">
+                            DL
+                        </div>
+                        <div>
+                            <span class="block font-bold text-white text-sm">Daniela L.</span>
+                            <span class="text-xs text-slate-400">Alumna Comunitaria</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-400 text-sm tracking-widest uppercase font-semibold">Preguntas Frecuentes</span>
+                <h2 class="font-cinzel text-3xl sm:text-4xl font-bold mt-2 mb-4">¿Tienes dudas sobre los cursos?</h2>
+            </div>
+
+            <div class="space-y-4">
+                
+                <div class="card-glass rounded-2xl border border-purple-500/20 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-white text-base">¿Necesito tener conocimientos previos de tarot?</span>
+                        <i class="fa-solid fa-chevron-down text-amber-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-300 text-sm leading-relaxed border-t border-purple-900/30 pt-4">
+                        ¡Para nada! El curso digital en Hotmart y las clases por Zoom están diseñados desde cero. No necesitas haber tocado una baraja antes ni memorizar manuales complejos.
+                    </div>
+                </div>
+
+                <div class="card-glass rounded-2xl border border-purple-500/20 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-white text-base">¿Cómo accedo al curso digital tras comprarlo en Hotmart?</span>
+                        <i class="fa-solid fa-chevron-down text-amber-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-300 text-sm leading-relaxed border-t border-purple-900/30 pt-4">
+                        Una vez que realizas el pago seguro a través de Hotmart, recibirás de forma automática un correo electrónico con tus datos de acceso a la plataforma para disfrutar el contenido de inmediato y de por vida.
+                    </div>
+                </div>
+
+                <div class="card-glass rounded-2xl border border-purple-500/20 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-white text-base">¿Las clases en vivo por Zoom quedan grabadas?</span>
+                        <i class="fa-solid fa-chevron-down text-amber-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-300 text-sm leading-relaxed border-t border-purple-900/30 pt-4">
+                        Sí, todas las sesiones interactivas por Zoom se graban y se suben a la plataforma privada para que puedas repasarlas cuantas veces desees si no pudiste asistir en directo.
+                    </div>
+                </div>
+
+                <div class="card-glass rounded-2xl border border-purple-500/20 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-white text-base">¿Qué tipo de baraja necesito para el curso?</span>
+                        <i class="fa-solid fa-chevron-down text-amber-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-300 text-sm leading-relaxed border-t border-purple-900/30 pt-4">
+                        Recomendamos utilizar el Tarot de Rider-Waite por su riqueza simbólica visual, sin embargo, puedes usar cualquier baraja de tarot tradicional con la que sientas afinidad.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-mysticCard border-t border-purple-900/40 py-16 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-purple-600 to-amber-500 flex items-center justify-center text-white">
+                            <i class="fa-solid fa-moon"></i>
+                        </div>
+                        <span class="font-cinzel font-bold text-lg text-white">GISELA LORME</span>
+                    </div>
+                    <p class="text-slate-400 max-w-sm text-xs sm:text-sm leading-relaxed">
+                        Terapeuta holística y tarotista dedicada a despertar la intuición y el poder interior a través de métodos sencillos, profundos y sin manuales.
+                    </p>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-cinzel font-bold text-white text-sm tracking-wider">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#sobre-mi" class="hover:text-amber-400 transition-colors">Sobre Mí</a></li>
+                        <li><a href="#curso-hotmart" class="hover:text-amber-400 transition-colors">Curso Digital Hotmart</a></li>
+                        <li><a href="#curso-zoom" class="hover:text-amber-400 transition-colors">Clases en Vivo por Zoom</a></li>
+                        <li><a href="#experiencia" class="hover:text-amber-400 transition-colors">Minidemo Tarot</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-cinzel font-bold text-white text-sm tracking-wider">Conecta con Gisela</h4>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-full card-glass border border-purple-500/30 flex items-center justify-center text-amber-400 hover:bg-purple-900/40 transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-full card-glass border border-purple-500/30 flex items-center justify-center text-amber-400 hover:bg-purple-900/40 transition-all">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-full card-glass border border-purple-500/30 flex items-center justify-center text-amber-400 hover:bg-purple-900/40 transition-all">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-full card-glass border border-purple-500/30 flex items-center justify-center text-amber-400 hover:bg-purple-900/40 transition-all">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-purple-900/30 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+                <p>&copy; 2026 Gisela Lorme. Todos los derechos reservados.</p>
+                <p class="mt-2 sm:mt-0">Diseño místico profesional optimizado para la transformación espiritual.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button onclick="openWhatsAppModal('¡Hola Gisela! Me gustaría recibir más información sobre tus cursos de tarot y terapias holísticas.')" class="relative group flex items-center justify-center w-16 h-16 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-2xl shadow-emerald-500/40 transition-all transform hover:scale-110">
+            <!-- Pulsing ring animation -->
+            <span class="absolute -inset-1 rounded-full bg-emerald-400 opacity-75 animate-ping pointer-events-none"></span>
+            <i class="fa-brands fa-whatsapp text-3xl relative z-10"></i>
+            
+            <!-- Tooltip -->
+            <span class="absolute right-20 px-3 py-1.5 rounded-xl card-glass border border-emerald-500/30 text-white text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-xl">
+                ¡Escríbeme por WhatsApp! 💬
+            </span>
+        </button>
+    </div>
+
+    <!-- Custom WhatsApp Message Modal -->
+    <div id="whatsapp-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div class="card-glass max-w-md w-full p-6 sm:p-8 rounded-3xl border border-emerald-500/40 shadow-2xl relative space-y-6 animate-float">
+            <button onclick="closeWhatsAppModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                    <h3 class="font-cinzel font-bold text-lg text-white">Contacto Directo con Gisela</h3>
+                    <span class="text-xs text-emerald-400 font-medium">Asistente Virtual / Atención Inmediata</span>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <label class="block text-xs font-semibold text-slate-300">Mensaje predeterminado:</label>
+                <textarea id="whatsapp-message-input" rows="4" class="w-full rounded-2xl bg-mysticDark border border-purple-500/30 p-4 text-sm text-slate-200 focus:outline-none focus:border-emerald-500 resize-none">¡Hola Gisela! Me gustaría recibir más información sobre tus cursos de tarot y terapias holísticas.</textarea>
+            </div>
+
+            <button onclick="sendToWhatsApp()" class="w-full py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold text-sm tracking-wide shadow-lg shadow-emerald-500/30 transition-all flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Enviar Mensaje a WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-mysticDark/95', 'shadow-xl');
+            } else {
+                navbar.classList.remove('bg-mysticDark/95', 'shadow-xl');
+            }
+        });
+
+        // FAQ Accordion
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('fa-chevron-down, i');
+            
+            // Toggle active state
+            content.classList.toggle('hidden');
+            if(icon) {
+                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            }
+        }
+
+        // Tarot Card Flip Demo Logic
+        let isFlipped = false;
+        const tarotMessages = [
+            { icon: "🌟", title: "La Estrella", desc: "Esperanza, inspiración y conexión divina. Es momento de confiar plenamente en tu intuición y dejar atrás las dudas." },
+            { icon: "🔮", title: "La Suma Sacerdotisa", desc: "Sabiduría interior, misterio y clarividencia. Escucha la voz silenciosa de tu alma; las respuestas ya habitan en ti." },
+            { icon: "☀️", title: "El Sol", desc: "Vitalidad, alegría, éxito y claridad absoluta. Todo lo que estaba oculto sale a la luz para bendecir tu camino." },
+            { icon: "🪄", title: "El Mago", desc: "Manifestación y poder personal. Tienes todas las herramientas necesarias en tus manos para crear la realidad que deseas." }
+        ];
+
+        function flipTarotCard() {
+            const card = document.getElementById('tarot-card');
+            if (!isFlipped) {
+                // Randomize message on flip
+                const randomMsg = tarotMessages[Math.floor(Math.random() * tarotMessages.length)];
+                document.getElementById('tarot-card-icon').innerText = randomMsg.icon;
+                document.getElementById('tarot-card-title').innerText = randomMsg.title;
+                document.getElementById('tarot-card-desc').innerText = randomMsg.desc;
+                
+                card.classList.add('flipped');
+                isFlipped = true;
+            } else {
+                card.classList.remove('flipped');
+                isFlipped = false;
+            }
+        }
+
+        function resetTarotCard() {
+            const card = document.getElementById('tarot-card');
+            card.classList.remove('flipped');
+            isFlipped = false;
+        }
+
+        // WhatsApp Modal Logic
+        function openWhatsAppModal(defaultText) {
+            const modal = document.getElementById('whatsapp-modal');
+            const textarea = document.getElementById('whatsapp-message-input');
+            if (defaultText) {
+                textarea.value = defaultText;
+            }
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeWhatsAppModal() {
+            const modal = document.getElementById('whatsapp-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function sendToWhatsApp() {
+            const message = document.getElementById('whatsapp-message-input').value;
+            // Phone number for Gisela Lorme (placeholder format, replace with actual number if available)
+            const phone = "5491100000000"; 
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank');
+            closeWhatsAppModal();
+        }
+    </script>
+</body>
+</html>
